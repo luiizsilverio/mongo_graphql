@@ -1,0 +1,19 @@
+# Aqui, definimos todas as rotas da aplicação (Query e Mutation)
+
+# Define o formato da requisição
+type User {
+    id: ID!         # ID é um tipo pré-definido do GraphQL
+    name: String!
+    email: String!  # exclamação = obrigatório
+}
+
+# Exclamação fora do colchete garante que não vai retornar null;
+# sempre vai retornar um array, mesmo que vazio.
+type Query {
+    users: [User!]!         # array de Users
+    user(id: ID!): User     # retorna um único usuário
+}
+
+type Mutation {
+    createUser(name: String!, email: String!): User
+}
