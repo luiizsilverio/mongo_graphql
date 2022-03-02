@@ -3,7 +3,7 @@ const path = require('path')
 const resolvers = require('./resolvers')
 const mongoose = require('mongoose')
 
-// conecta o BD 'agenda'
+// conecta o BD "graphql"
 mongoose.connect('mongodb://localhost:27017/graphql', {
   useNewUrlParser: true,
 })
